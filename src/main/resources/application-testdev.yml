@@ -1,0 +1,87 @@
+spring:
+  datasource:
+    defect-edx:
+      driver-class-name: oracle.jdbc.OracleDriver
+      jdbc-url: jdbc:oracle:thin:@10.11.108.142:1521/smgdb02
+      username: defectuser
+      password: defectuser
+      maximum-pool-size: 1
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        format_sql: true
+        ddl-auto: none
+    show-sql: false
+wistron:
+  it:
+    ftp:
+      ip: 10.12.2.170
+      user: smguser
+      password: SMG.user123
+  smg:
+    ftp:
+      ip: 10.11.109.110
+      user: dmesarc2
+      password: DMesarc2
+      smgImagePath: "/gpfsvol/defectImage/WindowsEdxLoaderTest"
+  local:
+      ftp:
+        ip: 10.11.108.73
+        user: wistron\smg_arc231
+        password: Date0717
+        smgImagePath: "/edxImage"
+  address:
+    downloadLocalAddress: D:\\Users\\SMG_arc231\\edx_image
+  mail-owner: sin_hui_wang@wistron.com
+tool_type:
+    tool_G3G4:
+      tool: DFSEM-14,DFSEM-A02,DFSEM-A06
+      edx_pixcel_filter:
+        enable: true
+        pixcel_width: 488
+        pixcel_height: 314
+      edx_size_filter:
+        enable: false
+        size_kb_max: 30
+        size_kb_min: 0
+    tool_G7:
+      tool: DFSEM-A12,DFSEM-A13,DFSEM-A14
+      edx_pixcel_filter:
+        enable: false
+        pixcel_width: 0
+        pixcel_height: 0
+      edx_size_filter:
+        enable: false
+        size_kb_max: 0
+        size_kb_min: 0
+    tool_7110:
+      tool: DFSEM-A11,DFSEM-B02
+      edx_pixcel_filter:
+        enable: true
+        pixcel_width: 512
+        pixcel_height: 512
+      edx_size_filter:
+        enable: false
+        size_kb_max: 80
+        size_kb_min: 0
+    tool_7280:
+      tool: DFSEM-A08,DFSEM-B05
+      edx_pixcel_filter:
+        enable: true
+        pixcel_width: 512
+        pixcel_height: 512
+      edx_size_filter:
+        enable: true
+        size_kb_max: 480
+        size_kb_min: 430
+    tool_7380:
+      tool: DFSEM-A07,DFSEM-B03
+      edx_pixcel_filter:
+        enable: true
+        pixcel_width: 512
+        pixcel_height: 512
+      edx_size_filter:
+        enable: false
+        size_kb_max: 500
+        size_kb_min: 420
